@@ -1,5 +1,6 @@
 import type { ComponentType } from 'react';
 import { ResponsivePseudoScatterPlot } from './week-01/ResponsivePseudoScatterPlot';
+import { CdcDiabetesSummary } from './week-02/CdcDiabetesSummary';
 
 export interface Assignment {
   id: string;
@@ -9,9 +10,14 @@ export interface Assignment {
 
 export const assignments: Assignment[] = [
   {
-    id: '1',
+    id: 'week-1',
     name: 'Week 1',
     component: ResponsivePseudoScatterPlot,
+  },
+  {
+    id: '1',
+    name: 'Week 2',
+    component: CdcDiabetesSummary,
   },
 ];
 

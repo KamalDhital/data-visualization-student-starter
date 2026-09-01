@@ -15,3 +15,14 @@ How to use, for subsequent assignments:
  * Update the index at `src/assignments/index.ts` to add the new listing
  * Redeploy to GitHub pages
  * Submit the link to your hosted assignment in GitHub pages
+
+## Week 2 — CDC Diabetes Health Indicators
+
+Week 2 presents a data abstraction for the [CDC Diabetes Health Indicators](https://archive.ics.uci.edu/dataset/891/cdc+diabetes+health+indicators) dataset from UCI, based on BRFSS healthcare and lifestyle survey responses.
+
+Run the app with `npm run dev`, then open **Week 2** in the sidebar or go directly to `?example=1`. The assignment page includes the dataset source, description, summary (253,680 rows, 21 columns, CSV), attribute type analysis, and purpose, plus an interactive view of the bundled CSV.
+
+For GitHub Pages, the Week 2 link will use the same query parameter after the deployed site URL, for example:
+`https://<your-github-username>.github.io/data-visualization-student-starter/?example=1`.
+
+Full write-up: `public/data/cdc-diabetes-health-indicators/README.md`.
