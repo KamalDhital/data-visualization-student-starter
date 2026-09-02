@@ -2,13 +2,18 @@
 
 ## Introduction
 For my final project, I am interested in exploring how interactive data visualization can help people understand complex datasets and identify meaningful patterns. At this stage, I am not selecting a final topic. Instead, I am exploring several possible domains and visualization approaches.
+
 My goal is to eventually create an interactive data visualization application that allows users to explore data rather than simply view static charts. The project could take the form of an interactive dashboard, a scrollytelling visualization, a visualization-centered application, or a combination of these approaches.
+
 The following ideas represent possible directions that I may refine throughout the course.
-------------------------------------
+
+---
 
 # Idea 1: Healthcare Costs and Trends Explorer
+
 ## Topic or Domain
 I am interested in exploring healthcare costs and trends in the United States. Healthcare data contains many interconnected factors, including insurance costs, medical spending, prescription drug prices, hospital costs, and health outcomes.
+
 An interactive visualization could help users explore how healthcare costs have changed over time and compare different regions or categories.
 
 ## Questions to Investigate
@@ -46,13 +51,14 @@ The dashboard could include:
 Users could interact with the visualization by selecting different states, time periods, or categories.
 
 ### Sketch: Healthcare Dashboard
-**Image:**
+**Image-1:**
 
 ![Healthcare Dashboard Sketch](images/final-project-sketch-1.jpg)
 
 This sketch represents an interactive dashboard layout. I am imagining a large chart at the top showing healthcare costs over time. Additional charts and filters would allow users to explore the data in greater detail.
 
--------------------------
+---
+
 # Idea 2: Social Media Bot and Online Activity Visualization
 
 ## Topic or Domain
@@ -99,7 +105,7 @@ The dashboard could include:
 
 ### Sketch : Social Media Network Visualization
 
-**Image:**
+**Image-2:**
 
 ![Social Network Sketch](images/final-project-sketch-2.jpg)
 
@@ -107,7 +113,8 @@ This sketch represents a network graph in which each node represents an account 
 
 I am interested in exploring how interaction techniques could help users navigate a potentially large and complex network.
 
------------------------------------------------------------
+---
+
 # Idea 3: Artificial Intelligence and Technology Trends
 
 ## Topic or Domain
@@ -155,14 +162,15 @@ A timeline could show the growth of different AI technologies and important mile
 
 ### Sketch: AI Trends and Technology Dashboard
 
-**Image:**
+**Image-3:**
 
 ![AI Trends Sketch](images/final-project-sketch-3.jpg)
 
 This sketch represents a dashboard containing a timeline, geographic visualization, and several comparison charts.
 
 Users could interact with filters to investigate how AI development differs across countries, industries, and time periods.
-------------------
+
+<hr>
 
 # Idea 4: Public Safety and Transportation Data
 
@@ -213,9 +221,10 @@ Selecting a location could reveal additional information and related visualizati
 
 ### Sketch: Incident Map
 
-**Image:**
+**Image-4:**
 
 ![Incident Map Sketch](images/final-project-sketch-4.jpg)
+
 ---
 
 # Initial Comparison of Project Ideas
