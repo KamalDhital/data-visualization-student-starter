@@ -23,8 +23,8 @@ Each row represents an individual and includes health factors such as:
 
 ## Dataset Summary
 
-- Rows: 253,680
-- Columns: 21
+- Rows: 70,692
+- Columns: 22
 - Format: CSV
 
 ## Attribute Analysis

@@ -324,7 +324,7 @@ function FilterSelect({
   );
 }
 
-function DatasetSummarySvg({ rows, columns }: { rows: number; columns: number }) {
+function DatasetSummarySvg({ rows, columns, format }: { rows: number; columns: number; format: string }) {
   const svgRef = useRef<SVGSVGElement>(null);
   const { ref: divRef, dimensions } = useDimensions();
 
@@ -336,7 +336,7 @@ function DatasetSummarySvg({ rows, columns }: { rows: number; columns: number })
 
     const centerX = width / 2;
     const centerY = height / 2;
-    const summaryLines = [`Rows: ${formatNumber(rows)}`, `Columns: ${formatNumber(columns)}`];
+    const summaryLines = [`Rows: ${formatNumber(rows)}`, `Columns: ${formatNumber(columns)}`, `Format: ${format}`];
 
     const root = select(svg).attr('viewBox', `0 0 ${width} ${height}`);
 
@@ -357,7 +357,7 @@ function DatasetSummarySvg({ rows, columns }: { rows: number; columns: number })
       .data([null])
       .join('text')
       .attr('x', centerX)
-      .attr('y', centerY - SUMMARY_LINE_HEIGHT / 2)
+      .attr('y', centerY - SUMMARY_LINE_HEIGHT)
       .attr('text-anchor', 'middle')
       .attr('dominant-baseline', 'middle')
       .attr('font-size', SUMMARY_FONT_SIZE)
@@ -369,7 +369,7 @@ function DatasetSummarySvg({ rows, columns }: { rows: number; columns: number })
       .attr('x', centerX)
       .attr('dy', (_line, index) => (index === 0 ? 0 : SUMMARY_LINE_HEIGHT))
       .text((line) => line);
-  }, [columns, dimensions, rows]);
+  }, [columns, dimensions, format, rows]);
 
   return (
     <div ref={divRef} className="mt-4 h-36 w-full">
@@ -435,6 +435,7 @@ export function CdcDiabetesSummary() {
 
   const previewRows = filteredRows.slice(0, 8);
   const totalRows = dataset?.rows.length ?? 0;
+  const totalColumns = dataset?.columns.length ?? 0;
   const filteredPercent = totalRows ? filteredRows.length / totalRows : 0;
   const diabetesRate = rateOfOne(filteredRows, 'Diabetes_binary');
   const averageBmi = average(filteredRows, 'BMI');
@@ -504,11 +505,11 @@ export function CdcDiabetesSummary() {
         <section className="rounded border border-zinc-200 bg-white p-5 shadow-sm">
           <h2 className="text-xl font-semibold">Dataset Summary</h2>
           <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-6 text-zinc-700">
-            <li>Rows: 253,680</li>
-            <li>Columns: 21</li>
+            <li>Rows: {dataset ? formatNumber(totalRows) : 'Loading...'}</li>
+            <li>Columns: {dataset ? formatNumber(totalColumns) : 'Loading...'}</li>
             <li>Format: CSV</li>
           </ul>
-          <DatasetSummarySvg rows={totalRows} columns={dataset?.columns.length ?? 21} />
+          {dataset && <DatasetSummarySvg rows={totalRows} columns={totalColumns} format="CSV" />}
         </section>
 
         <section className="rounded border border-zinc-200 bg-white shadow-sm">
