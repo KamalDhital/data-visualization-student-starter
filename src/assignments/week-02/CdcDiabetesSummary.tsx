@@ -1,4 +1,7 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { csvParse } from 'd3-dsv';
+import { select } from 'd3-selection';
+import { useDimensions } from '../week-01/useDimensions';
 
 type AttributeKind = 'Categorical (Binary)' | 'Categorical' | 'Ordinal' | 'Quantitative';
 type BinaryFilter = 'all' | '0' | '1';
@@ -51,6 +54,8 @@ interface ColumnSummary {
 const DATASET_FILE =
   'data/cdc-diabetes-health-indicators/diabetes_binary_5050split_health_indicators_BRFSS2015.csv';
 const DATASET_URL = `${import.meta.env.BASE_URL}${DATASET_FILE}`;
+const SUMMARY_FONT_SIZE = 24;
+const SUMMARY_LINE_HEIGHT = SUMMARY_FONT_SIZE * 1.25;
 
 const healthFactors = [
   'Diabetes status',
@@ -196,21 +201,14 @@ const incomeLabels: Record<number, string> = {
 };
 
 function parseCsv(csvText: string): ParsedDataset {
-  const [headerLine, ...dataLines] = csvText.trim().split(/\r?\n/);
-
-  if (!headerLine) {
-    throw new Error('The CSV file did not include a header row.');
-  }
-
-  const columns = headerLine.split(',') as Array<keyof DatasetRow>;
-  const rows = dataLines.map((line) => {
-    const values = line.split(',');
-
-    return columns.reduce<Partial<DatasetRow>>((row, column, index) => {
-      row[column] = Number(values[index]);
-      return row;
-    }, {}) as DatasetRow;
-  });
+  const parsedRows = csvParse(csvText);
+  const columns = parsedRows.columns as Array<keyof DatasetRow>;
+  const rows = parsedRows.map((row) =>
+    columns.reduce<Partial<DatasetRow>>((datasetRow, column) => {
+      datasetRow[column] = Number(row[column]);
+      return datasetRow;
+    }, {}) as DatasetRow,
+  );
 
   return { columns, rows };
 }
@@ -323,6 +321,65 @@ function FilterSelect({
         ))}
       </select>
     </label>
+  );
+}
+
+function DatasetSummarySvg({ rows, columns }: { rows: number; columns: number }) {
+  const svgRef = useRef<SVGSVGElement>(null);
+  const { ref: divRef, dimensions } = useDimensions();
+
+  useEffect(() => {
+    const svg = svgRef.current;
+    const { width, height } = dimensions;
+
+    if (!svg || width === 0 || height === 0) return;
+
+    const centerX = width / 2;
+    const centerY = height / 2;
+    const summaryLines = [`Rows: ${formatNumber(rows)}`, `Columns: ${formatNumber(columns)}`];
+
+    const root = select(svg).attr('viewBox', `0 0 ${width} ${height}`);
+
+    root
+      .selectAll('rect')
+      .data([null])
+      .join('rect')
+      .attr('x', 1)
+      .attr('y', 1)
+      .attr('width', Math.max(width - 2, 0))
+      .attr('height', Math.max(height - 2, 0))
+      .attr('rx', 4)
+      .attr('fill', '#f8fafc')
+      .attr('stroke', '#d4d4d8');
+
+    root
+      .selectAll('text')
+      .data([null])
+      .join('text')
+      .attr('x', centerX)
+      .attr('y', centerY - SUMMARY_LINE_HEIGHT / 2)
+      .attr('text-anchor', 'middle')
+      .attr('dominant-baseline', 'middle')
+      .attr('font-size', SUMMARY_FONT_SIZE)
+      .attr('font-weight', 650)
+      .attr('fill', '#18181b')
+      .selectAll('tspan')
+      .data(summaryLines)
+      .join('tspan')
+      .attr('x', centerX)
+      .attr('dy', (_line, index) => (index === 0 ? 0 : SUMMARY_LINE_HEIGHT))
+      .text((line) => line);
+  }, [columns, dimensions, rows]);
+
+  return (
+    <div ref={divRef} className="mt-4 h-36 w-full">
+      <svg
+        ref={svgRef}
+        className="h-full w-full"
+        role="img"
+        aria-label={`Dataset summary: ${formatNumber(rows)} rows and ${formatNumber(columns)} columns`}
+      />
+    </div>
   );
 }
 
@@ -451,6 +508,7 @@ export function CdcDiabetesSummary() {
             <li>Columns: 21</li>
             <li>Format: CSV</li>
           </ul>
+          <DatasetSummarySvg rows={totalRows} columns={dataset?.columns.length ?? 21} />
         </section>
 
         <section className="rounded border border-zinc-200 bg-white shadow-sm">
