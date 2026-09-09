@@ -1,6 +1,7 @@
 # Final Project Exploration 1
 
 ## Introduction
+
 For my final project, I am interested in exploring how interactive data visualization can help people understand complex datasets and identify meaningful patterns. At this stage, I am not selecting a final topic. Instead, I am exploring several possible domains and visualization approaches.
 
 My goal is to eventually create an interactive data visualization application that allows users to explore data rather than simply view static charts. The project could take the form of an interactive dashboard, a scrollytelling visualization, a visualization-centered application, or a combination of these approaches.
@@ -9,23 +10,28 @@ The following ideas represent possible directions that I may refine throughout t
 
 ---
 
-# Idea 1: Healthcare Costs and Trends Explorer
+## Idea 1: Healthcare Costs and Trends Explorer
 
-## Topic or Domain
+### Topic or Domain
+
 I am interested in exploring healthcare costs and trends in the United States. Healthcare data contains many interconnected factors, including insurance costs, medical spending, prescription drug prices, hospital costs, and health outcomes.
 
 An interactive visualization could help users explore how healthcare costs have changed over time and compare different regions or categories.
 
-## Questions to Investigate
-Some questions I might investigate include:
-How have healthcare costs changed over time in the United States?
-Which healthcare services contribute the most to overall spending?
-How do healthcare costs vary across states or regions?
-How do healthcare costs compare with health outcomes?
-What demographic or economic factors are associated with higher healthcare spending?
+### Questions to Investigate
 
-## Potential Datasets
+Some questions I might investigate include:
+
+- How have healthcare costs changed over time in the United States?
+- Which healthcare services contribute the most to overall spending?
+- How do healthcare costs vary across states or regions?
+- How do healthcare costs compare with health outcomes?
+- What demographic or economic factors are associated with higher healthcare spending?
+
+### Potential Datasets
+
 Possible data sources include:
+
 - [Peterson-KFF Health System Tracker](https://www.healthsystemtracker.org/)
 - [KFF Data and Analysis](https://www.kff.org/)
 - [Centers for Medicare & Medicaid Services Data](https://data.cms.gov/)
@@ -34,15 +40,18 @@ Possible data sources include:
 
 I would like to find datasets containing historical healthcare spending, insurance coverage, geographic information, and demographic variables.
 
-## Related Work and Inspiration
+### Related Work and Inspiration
+
 Some existing projects and visualizations that could provide inspiration include:
+
 - [Peterson-KFF Health System Tracker](https://www.healthsystemtracker.org/)
 - [Our World in Data: Health](https://ourworldindata.org/health-meta)
 - [The New York Times Interactive Graphics](https://www.nytimes.com/spotlight/interactive-stories)
 
-## Possible Visualization Ideas: Interactive Healthcare Dashboard
+### Possible Visualization Ideas: Interactive Healthcare Dashboard
 
 The dashboard could include:
+
 - A line chart showing healthcare costs over time.
 - A map showing differences in healthcare costs by state.
 - Bar charts comparing healthcare categories.
@@ -50,7 +59,8 @@ The dashboard could include:
 
 Users could interact with the visualization by selecting different states, time periods, or categories.
 
-### Sketch: Healthcare Dashboard
+#### Sketch: Healthcare Dashboard
+
 **Image-1:**
 
 ![Healthcare Dashboard Sketch](images/final-project-sketch-1.jpg)
@@ -59,14 +69,15 @@ This sketch represents an interactive dashboard layout. I am imagining a large c
 
 ---
 
-# Idea 2: Social Media Bot and Online Activity Visualization
+## Idea 2: Social Media Bot and Online Activity Visualization
 
-## Topic or Domain
+### Topic or Domain
+
 I am also interested in exploring social media activity and the differences between automated accounts and human accounts. Social media platforms generate large amounts of data that could potentially be explored using interactive visualizations.
 
 A visualization application could help users understand patterns in account activity, posting behavior, networks, and potential bot characteristics.
 
-## Questions to Investigate
+### Questions to Investigate
 
 Some questions include:
 
@@ -76,7 +87,7 @@ Some questions include:
 - Are there specific activity patterns associated with bot accounts?
 - How can visualizations help identify unusual account behavior?
 
-## Potential Datasets
+### Potential Datasets
 
 Possible datasets include:
 
@@ -86,7 +97,7 @@ Possible datasets include:
 
 I would need to investigate dataset availability and determine whether the data can be used appropriately for the project.
 
-## Related Work and Inspiration
+### Related Work and Inspiration
 
 Potential inspiration includes:
 
@@ -94,7 +105,7 @@ Potential inspiration includes:
 - Network visualization projects using interactive graphs.
 - Research visualizations involving social media activity and misinformation.
 
-## Possible Visualization Idea: Bot Activity Dashboard
+### Possible Visualization Idea: Bot Activity Dashboard
 
 The dashboard could include:
 
@@ -103,7 +114,7 @@ The dashboard could include:
 - Bar charts comparing account characteristics.
 - Interactive filtering based on account type.
 
-### Sketch : Social Media Network Visualization
+#### Sketch: Social Media Network Visualization
 
 **Image-2:**
 
@@ -115,13 +126,13 @@ I am interested in exploring how interaction techniques could help users navigat
 
 ---
 
-# Idea 3: Artificial Intelligence and Technology Trends
+## Idea 3: Artificial Intelligence and Technology Trends
 
-## Topic or Domain
+### Topic or Domain
 
 Another possible topic is the growth and development of artificial intelligence technologies. AI has become increasingly important in many industries, and there may be interesting datasets involving research publications, technology adoption, job trends, or AI-related investments.
 
-## Questions to Investigate
+### Questions to Investigate
 
 Possible questions include:
 
@@ -131,7 +142,7 @@ Possible questions include:
 - How is AI adoption changing across industries?
 - What trends can be identified in AI-related jobs and skills?
 
-## Potential Datasets
+### Potential Datasets
 
 Possible sources include:
 
@@ -140,7 +151,7 @@ Possible sources include:
 - [World Bank Open Data](https://data.worldbank.org/)
 - Research publication datasets.
 
-## Related Work and Inspiration
+### Related Work and Inspiration
 
 Potential sources of inspiration include:
 
@@ -148,7 +159,7 @@ Potential sources of inspiration include:
 - Interactive technology trend visualizations.
 - Data-driven reports from research organizations.
 
-## Possible Visualization Ideas: AI Trends Dashboard
+### Possible Visualization Ideas: AI Trends Dashboard
 
 An interactive dashboard could allow users to explore AI trends by:
 
@@ -160,7 +171,7 @@ An interactive dashboard could allow users to explore AI trends by:
 
 A timeline could show the growth of different AI technologies and important milestones.
 
-### Sketch: AI Trends and Technology Dashboard
+#### Sketch: AI Trends and Technology Dashboard
 
 **Image-3:**
 
@@ -170,17 +181,17 @@ This sketch represents a dashboard containing a timeline, geographic visualizati
 
 Users could interact with filters to investigate how AI development differs across countries, industries, and time periods.
 
-<hr>
+---
 
-# Idea 4: Public Safety and Transportation Data
+## Idea 4: Public Safety and Transportation Data
 
-## Topic or Domain
+### Topic or Domain
 
 A final possible direction is exploring transportation and public safety data. This could include traffic accidents, transportation patterns, road safety, or other geographic datasets.
 
 This topic could work well for an interactive visualization because location and time are both important components of the data.
 
-## Questions to Investigate
+### Questions to Investigate
 
 Possible questions include:
 
@@ -190,7 +201,7 @@ Possible questions include:
 - What relationships exist between population, traffic volume, and incidents?
 - Can users identify geographic patterns through interactive exploration?
 
-## Potential Datasets
+### Potential Datasets
 
 Potential sources include:
 
@@ -198,7 +209,7 @@ Potential sources include:
 - [National Highway Traffic Safety Administration](https://www.nhtsa.gov/)
 - Local and state open data portals.
 
-## Related Work and Inspiration
+### Related Work and Inspiration
 
 Possible inspiration includes:
 
@@ -206,7 +217,7 @@ Possible inspiration includes:
 - Public safety dashboards.
 - Geographic data visualizations using interactive maps.
 
-## Possible Visualization Ideas
+### Possible Visualization Ideas
 
 The application could display incidents on an interactive map.
 
@@ -219,7 +230,7 @@ Users could filter the data by:
 
 Selecting a location could reveal additional information and related visualizations.
 
-### Sketch: Incident Map
+#### Sketch: Incident Map
 
 **Image-4:**
 
@@ -227,23 +238,22 @@ Selecting a location could reveal additional information and related visualizati
 
 ---
 
-# Initial Comparison of Project Ideas
+## Initial Comparison of Project Ideas
 
-| Project Idea | Main Visualization Approach | Potential Interaction |
-|---|---|---|
-| Healthcare Costs | Dashboard and map | Filtering, comparisons, state selection |
-| Climate Trends | Timeline and global explorer | Country selection and time slider |
-| Social Media Bots | Network and dashboard | Network exploration and filtering |
-| AI Trends | Dashboard and timeline | Filtering by country, industry, and year |
-| Transportation | Map and timeline | Geographic and temporal filtering |
+| Project Idea      | Main Visualization Approach | Potential Interaction                    |
+| ----------------- | --------------------------- | ---------------------------------------- |
+| Healthcare Costs  | Dashboard and map           | Filtering, comparisons, state selection  |
+| Social Media Bots | Network and dashboard       | Network exploration and filtering        |
+| AI Trends         | Dashboard and timeline      | Filtering by country, industry, and year |
+| Transportation    | Map and timeline            | Geographic and temporal filtering        |
 
-At this stage, the healthcare, climate, and social media bot ideas are particularly interesting because they contain complex datasets with multiple dimensions that could benefit from interactive exploration.
+At this stage, the healthcare, social media bot, AI trends, and transportation ideas are particularly interesting because they contain complex datasets with multiple dimensions that could benefit from interactive exploration.
 
 However, I will continue exploring all of these possibilities before selecting a final project topic.
 
 ---
 
-# Current Direction and Next Steps
+## Current Direction and Next Steps
 
 The purpose of this exploration is to consider multiple possibilities rather than immediately commit to one visualization. Over the next several weeks, I plan to:
 
@@ -258,3 +268,100 @@ The purpose of this exploration is to consider multiple possibilities rather tha
 The final project will ideally become a professional-level interactive data visualization application that demonstrates both effective visualization design and meaningful user interaction.
 
 At this stage, I am most interested in creating an application that allows users to actively explore relationships and patterns in the data instead of simply presenting a collection of static charts.
+
+---
+
+## Task Analysis
+
+A core principle of visualization design is that the visualization should support users in accomplishing meaningful analytical tasks rather than focusing on a specific chart type. Following the task analysis concepts, the goal of this project is to identify the user goals, questions, and data exploration tasks that an interactive visualization should facilitate regardless of the final visual design. following is the detail for each four topics selected.
+
+### Healthcare Costs and Trends Explorer
+
+#### User Goals
+
+- Understand how healthcare spending evolves over time.
+- Compare spending across states, regions, or demographic groups.
+- Explore relationships between spending and health outcomes.
+
+#### Analytical Tasks
+
+- Identify long-term trends in healthcare spending.
+- Compare healthcare costs across states, regions, or demographic groups.
+- Determine which healthcare categories contribute most to overall spending.
+- Examine relationships between healthcare expenditures and health outcomes.
+- Detect geographic areas with unusually high or low healthcare costs.
+- Identify demographic or economic factors associated with differences in spending.
+- Explore changes in patterns across different time periods.
+- Investigate outliers that do not follow overall trends.
+
+### Social Media Bot and Online Activity Visualization
+
+#### User Goals
+
+- Distinguish automated accounts from human accounts.
+- Identify suspicious or abnormal activity patterns.
+- Explore interaction networks and communities.
+
+#### Analytical Tasks
+
+- Compare behavioral characteristics of different account types.
+- Identify unusual posting behaviors or activity levels.
+- Examine relationships between account attributes and activity patterns.
+- Discover clusters or communities within social networks.
+- Trace connections and interaction patterns among accounts.
+- Detect accounts that exhibit characteristics commonly associated with bots.
+- Compare network structures across user groups.
+- Identify accounts that differ substantially from normal behavior patterns.
+
+### Artificial Intelligence and Technology Trends
+
+#### User Goals
+
+- Understand growth in AI research, investment, and adoption.
+- Compare AI activity across countries, industries, or organizations.
+
+#### Analytical Tasks
+
+- Identify growth trends in AI research, investment, or adoption.
+- Compare AI activity across countries, industries, or organizations.
+- Determine which AI domains are growing most rapidly.
+- Explore relationships between geographic location and AI development.
+- Detect significant shifts in technological focus over time.
+- Compare patterns across multiple time periods.
+- Identify leading and emerging areas of AI innovation.
+- Investigate organizations or regions that differ from broader trends.
+
+### Public Safety and Transportation Data
+
+#### User Goals
+
+- Understand where and when transportation incidents occur.
+- Identify factors contributing to incident frequency.
+
+#### Analytical Tasks
+
+- Identify geographic locations with high concentrations of incidents.
+- Compare incident patterns across regions or transportation systems.
+- Examine temporal patterns by year, month, day, or time of day.
+- Detect hotspots and clusters of incident activity.
+- Explore relationships between traffic volume, population, and incidents.
+- Identify locations or periods that differ from expected patterns.
+- Compare incident characteristics across categories.
+- Investigate changes in transportation and safety patterns over time.
+
+### Cross-Project Visualization Tasks
+
+Regardless of the final topic selected, the visualization should support several common high-level analytical tasks:
+
+- Explore large and multidimensional datasets.
+- Compare values, groups, locations, and time periods.
+- Identify trends and temporal changes.
+- Detect outliers and unusual observations.
+- Discover patterns and relationships among variables.
+- Investigate geographic distributions.
+- Filter and focus on subsets of data.
+- Examine details while maintaining awareness of broader patterns.
+- Generate and evaluate hypotheses based on observed data.
+- Support evidence-based conclusions through interactive exploration.
+
+By focusing on these goals and tasks rather than a specific visualization type, the final project can be designed around users' analytical needs and provide meaningful support for data exploration and decision-making.
