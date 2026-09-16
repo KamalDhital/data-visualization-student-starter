@@ -11,6 +11,7 @@ const DATASET_FILE =
   'data/cdc-diabetes-health-indicators/diabetes_binary_5050split_health_indicators_BRFSS2015.csv';
 const DATASET_URL = `${import.meta.env.BASE_URL}${DATASET_FILE}`;
 
+// The CSV stores age as numbers, so these labels make the chart readable.
 const ageLabels: Record<number, string> = {
   1: '18-24',
   2: '25-29',
@@ -56,11 +57,13 @@ function useAgeGroupCounts(rows: DatasetRow[]) {
   return useMemo(() => {
     const counts = new Map<number, number>();
 
+    // Count how many survey records belong to each age category.
     rows.forEach((row) => {
       if (!Number.isFinite(row.Age)) return;
       counts.set(row.Age, (counts.get(row.Age) ?? 0) + 1);
     });
 
+    // Keep all age groups in order, even before the CSV finishes loading.
     return Object.entries(ageLabels).map(([ageGroup, label]) => ({
       ageGroup: label,
       count: counts.get(Number(ageGroup)) ?? 0,
@@ -72,6 +75,7 @@ export function CdcDiabetesAgeLegibilityChart() {
   const [rows, setRows] = useState<DatasetRow[]>([]);
 
   useEffect(() => {
+    // Load only the Age column because this chart only compares age groups.
     void csv(DATASET_URL, (row) => ({
       Age: Number(row.Age),
     })).then(setRows);
@@ -82,6 +86,7 @@ export function CdcDiabetesAgeLegibilityChart() {
   const innerHeight = chart.height - chart.margin.top - chart.margin.bottom;
   const maxCount = max(data, (d) => d.count) ?? 0;
 
+  // The band scale spaces the age-group bars evenly across the x-axis.
   const xScale = useMemo(
     () =>
       scaleBand()
@@ -91,6 +96,7 @@ export function CdcDiabetesAgeLegibilityChart() {
     [data, innerWidth],
   );
 
+  // The linear scale converts record counts into vertical bar positions.
   const yScale = useMemo(
     () => scaleLinear().domain([0, maxCount]).nice().range([innerHeight, 0]),
     [innerHeight, maxCount],
@@ -116,6 +122,7 @@ export function CdcDiabetesAgeLegibilityChart() {
 
         <rect width={chart.width} height={chart.height} rx="8" fill="#f8fafc" />
 
+        {/* Title block: explains the chart without needing extra page text. */}
         <g transform="translate(48, 34)">
           <text fill={colors.title} className="text-[30px] font-bold">
             CDC Diabetes Records by Age Group
@@ -128,6 +135,7 @@ export function CdcDiabetesAgeLegibilityChart() {
           </text>
         </g>
 
+        {/* Main plotting area is moved inside the margins with an SVG group. */}
         <g transform={`translate(${chart.margin.left}, ${chart.margin.top})`}>
           {yTicks.map((tick) => (
             <g key={tick} transform={`translate(0, ${yScale(tick)})`}>
@@ -146,6 +154,7 @@ export function CdcDiabetesAgeLegibilityChart() {
             const y = yScale(datum.count);
             const barHeight = innerHeight - y;
 
+            // Each bar starts at its scaled y-position and grows down to the baseline.
             return (
               <g key={datum.ageGroup}>
                 <rect
