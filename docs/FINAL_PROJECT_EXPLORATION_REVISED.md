@@ -385,8 +385,16 @@ This prioritization allows the project to preserve the north-star direction whil
 
 ---
 
-# Conclusion
+# V1 Prototype 
 
-The revised *AI & Technology Trends Explorer* has evolved from an early dashboard concept into a task-centered interactive visualization system. The project will focus on helping users compare AI activity, identify trends, investigate geographic and industry differences, and explore relationships among multiple indicators.
+The Week 6 prototype represents the first working version of the *AI & Technology Trends Explorer*. It demonstrates the core dashboard structure and several visualizations that support comparison across industries, countries, and AI technologies.
 
-The revised concept incorporates lessons from task analysis, visual encoding, interaction design, dashboard organization, and the Four Levels of Validation. The new north-star sketch provides an ambitious target for the final system while the scope section identifies a realistic core that can be implemented first.
+## Implemented Features
+
+- **KPI Cards** – provide a quick summary of important AI-related indicators.
+- **Industry Adoption Analysis** – compares AI adoption levels across different industries.
+- **Country AI Index Visualization** – shows differences in AI activity and performance across countries.
+- **AI Tool Popularity Analysis** – compares the relative popularity of selected AI tools and platforms.
+
+The V1 prototype establishes the foundation for the final dashboard. Future improvements will focus on adding shared filters, stronger interaction between visualizations, clearer tooltips and labels, and additional time-based analysis.
+
