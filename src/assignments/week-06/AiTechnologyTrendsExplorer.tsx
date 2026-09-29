@@ -89,7 +89,7 @@ export function AiTechnologyTrendsExplorer() {
                 <div className="text-xl font-black text-slate-950">{selectedYear}</div>
               </div>
               <button
-                className="h-12 rounded-md border border-slate-300 bg-white px-5 text-sm font-bold text-slate-800 shadow-sm transition hover:border-slate-400 hover:bg-slate-50"
+                className="h-12 rounded-md border border-blue-700 bg-blue-600 px-5 text-sm font-bold text-white shadow-sm transition hover:border-blue-800 hover:bg-blue-700"
                 onClick={() => {
                   setSelectedYear('2026');
                   setSelectedIndustry('All industries');
