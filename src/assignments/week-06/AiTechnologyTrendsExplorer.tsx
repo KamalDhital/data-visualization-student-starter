@@ -74,16 +74,16 @@ export function AiTechnologyTrendsExplorer() {
     <main className="h-full min-w-0 w-full overflow-auto bg-[#eef3f8] text-slate-950">
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-3 py-4 sm:gap-5 sm:px-5 lg:px-6">
         <header className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
-          <div className="grid gap-5 px-4 py-5 sm:px-5 sm:py-6 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
+          <div className="grid gap-5 px-4 py-5 sm:px-5 sm:py-6 xl:grid-cols-[minmax(0,1fr)_auto] xl:items-end">
             <div className="min-w-0">
-              <h1 className="text-2xl font-black leading-tight text-[#0000ff] sm:text-4xl lg:text-5xl">
+              <h1 className="text-2xl font-black leading-tight text-[#0000ff] sm:text-4xl lg:text-4xl xl:text-5xl">
                 AI & Technology Trends Explorer
               </h1>
               <p className="mt-3 max-w-3xl text-base leading-7 text-slate-600">
                 Track adoption, investment, industry change, employment impact, and short-term trend signals across a coordinated AI market dashboard.
               </p>
             </div>
-            <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
+            <div className="flex flex-col gap-3 sm:flex-row xl:justify-end">
               <div className="rounded-md border border-slate-200 bg-[#fff7ed] px-3 py-2">
                 <div className="text-xs font-black uppercase text-amber-700">Current year</div>
                 <div className="text-xl font-black text-slate-950">{selectedYear}</div>
