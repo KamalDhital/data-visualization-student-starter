@@ -76,7 +76,7 @@ export function AiTechnologyTrendsExplorer() {
         <header className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
           <div className="grid gap-5 px-4 py-5 sm:px-5 sm:py-6 xl:grid-cols-[minmax(0,1fr)_auto] xl:items-end">
             <div className="min-w-0">
-              <h1 className="text-2xl font-black leading-tight text-[#0000ff] sm:text-4xl lg:text-4xl xl:text-5xl">
+              <h1 className="text-xl font-black leading-tight text-[#0000ff] sm:text-3xl lg:text-3xl xl:text-4xl">
                 AI & Technology Trends Explorer
               </h1>
               <p className="mt-3 max-w-3xl text-base leading-7 text-slate-600">
