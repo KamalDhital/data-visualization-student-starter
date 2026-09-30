@@ -89,6 +89,8 @@ Potential sources identified during the project exploration include:
 - Industry AI-adoption surveys.
 - Workforce and employment datasets.
 
+The current V1 prototype uses the **Global AI Tool Adoption** dataset from Kaggle/Kangle.com as the main working dataset. In the project notes this dataset is also referred to as `global_ai_tools_adaption`; in the project files, it is stored under `public/data/global_ai_tool_adoption/`. The dataset includes company-level adoption records plus country and industry summaries, making it useful for exploring AI adoption by year, region, country, industry, tool use, investment, productivity, and workforce impact.
+
 The final set of sources will depend on whether variables can be aligned across compatible years, countries, industries, and definitions. A smaller coherent dataset is preferable to combining many incompatible measures.
 
 ---
@@ -385,16 +387,20 @@ This prioritization allows the project to preserve the north-star direction whil
 
 ---
 
-# V1 Prototype 
+# V1 Prototype
 
-The Week 6 prototype represents the first working version of the *AI & Technology Trends Explorer*. It demonstrates the core dashboard structure and several visualizations that support comparison across industries, countries, and AI technologies.
+The Week 6 prototype is the first working version of the *AI & Technology Trends Explorer*. It uses the **Global AI Tool Adoption** information dataset from Kaggle/Kangle.com, stored locally as `global_ai_tool_adoption`, to test the dashboard structure with real data instead of only a concept sketch.
+
+The prototype loads three CSV files: company-level AI adoption records, country-level AI index indicators, and industry-level summary measures. Together, these files support filtering by year, industry, and region, while also allowing comparisons across countries, industries, adoption rates, investment, productivity, and workforce impact.
 
 ## Implemented Features
 
-- **KPI Cards** – provide a quick summary of important AI-related indicators.
-- **Industry Adoption Analysis** – compares AI adoption levels across different industries.
-- **Country AI Index Visualization** – shows differences in AI activity and performance across countries.
-- **AI Tool Popularity Analysis** – compares the relative popularity of selected AI tools and platforms.
+- **KPI Cards** – summarize AI investment, estimated AI users, startup count, and productivity change.
+- **Shared Filters** – filter the dashboard by year, industry, and region.
+- **Country Visualization** – compares country-level adoption, investment, maturity, patents, and research capacity.
+- **Temporal Trend Analysis** – shows AI adoption changes by year and quarter.
+- **Industry and Workforce Views** – compare adoption, productivity, jobs created, and jobs displaced across industries.
+- **Context/Forecast Panel** – summarizes the current selection and begins to support the insight panel proposed in the north-star design.
 
-The V1 prototype establishes the foundation for the final dashboard. Future improvements will focus on adding shared filters, stronger interaction between visualizations, clearer tooltips and labels, and additional time-based analysis.
+The V1 prototype shows that the dataset can support the main final-project goals: interactive filtering, aggregation, geographic comparison, industry comparison, and temporal analysis. Future improvements will focus on stronger linked interaction, clearer tooltips, and better explanation of dataset limitations.
 
