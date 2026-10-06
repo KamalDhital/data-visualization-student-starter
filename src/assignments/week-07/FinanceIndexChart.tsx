@@ -132,7 +132,7 @@ export function FinanceIndexChart() {
       <div className="mx-auto flex w-full max-w-[1600px] flex-col gap-4 px-3 py-4 sm:px-5 lg:px-6">
         <header className="grid gap-4 border-b border-slate-300 pb-4 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
           <div className="min-w-0">
-            <p className="text-xs font-black uppercase tracking-[0.18em] text-blue-700">Week 07</p>
+            <p className="text-sm font-black uppercase tracking-[0.18em] text-blue-700">Week 07</p>
             <h1 className="mt-1 text-2xl font-black leading-tight text-slate-950 sm:text-4xl">
               Amazon Finance Index Chart
             </h1>
@@ -142,10 +142,10 @@ export function FinanceIndexChart() {
           </div>
           <div className="flex flex-wrap gap-2">
             <button
-              className="rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-bold text-slate-700 shadow-sm transition hover:border-blue-500 hover:text-blue-700"
+              className="rounded-full border border-blue-700 bg-blue-600 px-4 py-2 text-sm font-bold text-white shadow-sm transition hover:border-blue-800 hover:bg-blue-700"
               onClick={resetIndexDate}
             >
-              Reset baseline
+              Reset Baseline
             </button>
           </div>
         </header>
