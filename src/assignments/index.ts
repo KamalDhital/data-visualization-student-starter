@@ -6,6 +6,7 @@ import { CdcDiabetesAgeLegibilityChart } from './week-04/CdcDiabetesAgeLegibilit
 import { CdcDiabetesAgeInteractiveChart } from './week-05/CdcDiabetesAgeInteractiveChart';
 import { AiTechnologyTrendsExplorer } from './week-06/AiTechnologyTrendsExplorer';
 import { FinanceIndexChart } from './week-07/FinanceIndexChart';
+import { AiTechnologyTrendsExplorer as Week08AiTechnologyTrendsExplorer } from './week-08/AiTechnologyTrendsExplorer';
 
 export interface Assignment {
   id: string;
@@ -48,6 +49,11 @@ export const assignments: Assignment[] = [
     id: 'week-7',
     name: 'Week 7',
     component: FinanceIndexChart,
+  },
+  {
+    id: 'week-8',
+    name: 'Week 8',
+    component: Week08AiTechnologyTrendsExplorer,
   },
 ];
 
