@@ -9,7 +9,7 @@ import './week10.css';
 
 // Week 10 entry point: load CSV -> apply filters -> apply brush -> render bars and totals.
 // Reuses Week 05's dataset path, age labels, status colors, and validation helper.
-export function DiabetesBrushExplorer() {
+export function CdcDiabetesExplorer() {
   const [rows, setRows] = useState<HealthRow[]>([]);
   const [error, setError] = useState('');
   // Dropdown and legend state determine which responses are available to the chart.

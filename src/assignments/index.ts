@@ -7,13 +7,16 @@ import { CdcDiabetesAgeInteractiveChart } from './week-05/CdcDiabetesAgeInteract
 import { AiTechnologyTrendsExplorer } from './week-06/AiTechnologyTrendsExplorer';
 import { FinanceIndexChart } from './week-07/FinanceIndexChart';
 import { AiTechnologyTrendsExplorer as Week08AiTechnologyTrendsExplorer } from './week-08/AiTechnologyTrendsExplorer';
+import { CdcDiabetesExplorer } from './week-10/cdcDiabetesExplorer';
 
+// Each assignment supplies a URL identifier, sidebar label, and React entry component.
 export interface Assignment {
   id: string;
   name: string;
   component: ComponentType;
 }
 
+// App.tsx uses this order for the sidebar, placing Week 10 immediately below Week 8.
 export const assignments: Assignment[] = [
   {
     id: 'week-1',
@@ -55,8 +58,15 @@ export const assignments: Assignment[] = [
     name: 'Week 8',
     component: Week08AiTechnologyTrendsExplorer,
   },
+  {
+    id: 'week-10',
+    name: 'Week 10',
+    component: CdcDiabetesExplorer,
+  },
 ];
 
+// Look up the component using the URL's ?example= value (for example, week-10).
 export const assignmentsMap = new Map(assignments.map((ex) => [ex.id, ex]));
 
+// Used when the URL has no example parameter; '1' is the existing Week 2 identifier.
 export const defaultAssignment = '1';
