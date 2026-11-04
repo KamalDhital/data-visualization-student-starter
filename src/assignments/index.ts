@@ -8,6 +8,7 @@ import { AiTechnologyTrendsExplorer } from './week-06/AiTechnologyTrendsExplorer
 import { FinanceIndexChart } from './week-07/FinanceIndexChart';
 import { AiTechnologyTrendsExplorer as Week08AiTechnologyTrendsExplorer } from './week-08/AiTechnologyTrendsExplorer';
 import { CdcDiabetesExplorer } from './week-10/cdcDiabetesExplorer';
+import { AiTechnologyTrendsExplorer as Week11AiTechnologyTrendsExplorer } from './week-11/AiTechnologyTrendsExplorer';
 
 // Each assignment supplies a URL identifier, sidebar label, and React entry component.
 export interface Assignment {
@@ -16,7 +17,7 @@ export interface Assignment {
   component: ComponentType;
 }
 
-// App.tsx uses this order for the sidebar, placing Week 10 immediately below Week 8.
+// App.tsx uses this order for the sidebar.
 export const assignments: Assignment[] = [
   {
     id: 'week-1',
@@ -62,6 +63,11 @@ export const assignments: Assignment[] = [
     id: 'week-10',
     name: 'Week 10',
     component: CdcDiabetesExplorer,
+  },
+  {
+    id: 'week-11',
+    name: 'Week-11-Final-Project-Itheration',
+    component: Week11AiTechnologyTrendsExplorer,
   },
 ];
 
